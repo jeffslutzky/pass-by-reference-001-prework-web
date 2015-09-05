@@ -30,9 +30,9 @@ print_the_answer
 NameError: undefined local variable or method 'the_answer_to_the_ultimate_question_of_life_the_universe_and_everything' for main:Object
 ```
 
-Why can't the method not see the answer? It's right there! It's because methods drop an imaginary "gate" around their environment, closing out all other local variables.
+Why can't the method see the answer? It's right there! It's because methods drop an imaginary "gate" around their environment, closing out all other local variables.
 
-Hm, well what about a variable declared inside a method body?
+Hmm... well what about a variable declared inside a method body?
 
 ``` ruby
 def what_are_you_thinking_about?
@@ -94,7 +94,7 @@ puts.array.inspect
 
 ```
 
-Since all arrays in Ruby are mutable, when we pass the variable `some_words` (which as a *reference* to an array) into the method `change_the_array`, the method *actually changes the array!*
+Since all arrays in Ruby are mutable, when we pass the variable `some_words` (which is a *reference* to an array) into the method `change_the_array`, the method *actually changes the array!*
 
 
 On the other hand, variables bound to objects that are passed by value, like integers, are **not** mutable. This means that if you pass such a variable into a method, the method *cannot* operate on the original variable's value to change it. 
